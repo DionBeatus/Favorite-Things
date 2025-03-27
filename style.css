@@ -1,20 +1,39 @@
-/* Mengatur tampilan umum */
-body {
-    font-family: 'Arial', sans-serif;
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset */
+body, h1, h2, p, ul {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
     color: #333;
-}
-
-/* Header dan Navigasi */
-header {
-    background-color: #1e3a8a;
-    color: white;
     text-align: center;
-    padding: 20px 0;
+    overflow-x: hidden;
 }
 
+/* Animasi Background */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigasi */
 nav ul {
     list-style: none;
     padding: 0;
@@ -28,27 +47,46 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-size: 18px;
     font-weight: bold;
-    transition: 0.3s;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 6px;
 }
 
 nav ul li a:hover {
-    color: #ffcc00;
+    background: #ffcc00;
+    color: #1e3a8a;
+    padding: 12px;
 }
 
-/* Section */
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Content Sections */
 .content {
     text-align: center;
     padding: 50px 20px;
-    background-color: white;
-    margin: 20px auto;
+    background: white;
+    margin: 30px auto;
     width: 80%;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+/* Efek Hover pada Section */
+.content:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Section Headings */
 h2 {
-    color: #1e3a8a;
+    color: #ff4b2b;
+    font-size: 28px;
 }
 
 /* Gambar */
@@ -56,29 +94,81 @@ img {
     width: 300px;
     height: auto;
     border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* List */
+/* Efek Hover pada Gambar */
+img:hover {
+    transform: scale(1.1);
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* List Styling */
 ul {
     list-style-type: none;
     padding: 0;
 }
 
 ul li {
-    background-color: #1e3a8a;
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
     color: white;
     display: inline-block;
-    padding: 8px 15px;
+    padding: 12px 18px;
     margin: 5px;
-    border-radius: 5px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Efek Hover pada List */
+ul li:hover {
+    background: linear-gradient(45deg, #ffcc00, #ff9900);
+    color: #fff;
+    transform: scale(1.1) rotate(5deg);
 }
 
 /* Footer */
 footer {
     text-align: center;
-    background-color: #1e3a8a;
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
     color: white;
     padding: 15px 0;
     margin-top: 20px;
+    font-weight: 400;
+}
+
+/* Tombol Interaktif */
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #ff9900, #ffcc00);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover pada Tombol */
+.button:hover {
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    transform: scale(1.1);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Animasi Floating */
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.button {
+    animation: floating 3s infinite ease-in-out;
 }
