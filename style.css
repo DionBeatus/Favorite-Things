@@ -10,38 +10,54 @@ body, h1, h2, p, ul {
 
 /* Body Styling */
 body {
-    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
-    background-size: 400% 400%;
-    animation: gradientBG 10s ease infinite;
+    background: linear-gradient(135deg, #d9d9d9, #b8c6db);
     color: #333;
     text-align: center;
     overflow-x: hidden;
-}
-
-/* Animasi Background */
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    padding: 20px;
+    transition: background 0.5s ease-in-out;
 }
 
 /* Header */
 header {
-    background: linear-gradient(90deg, #ffef41, #ff4b2b);
+    background: linear-gradient(90deg, #829ab1, #a2b9bc);
     color: white;
     padding: 20px 0;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    font-size: 24px;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+}
+
+header:hover {
+    transform: scale(1.05);
 }
 
 /* Navigasi */
+nav {
+    margin-top: 10px;
+    padding: 10px;
+    background: #6c7a89;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+nav:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+}
+
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
 }
 
 nav ul li a {
@@ -49,126 +65,87 @@ nav ul li a {
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
-    padding: 10px;
-    transition: all 0.3s ease-in-out;
-    border-radius: 6px;
+    padding: 12px 20px;
+    background: #556b7c;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
 }
 
 nav ul li a:hover {
-    background: #ffcc00;
-    color: #1e3a8a;
-    padding: 12px;
-}
-
-/* Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
+    background: #3d566e;
 }
 
 /* Content Sections */
-.content {
-    text-align: center;
-    padding: 50px 20px;
-    background: white;
-    margin: 30px auto;
+section {
+    background: #f1f1f1;
+    color: black;
+    padding: 30px;
+    margin: 20px auto;
     width: 80%;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* Efek Hover pada Section */
-.content:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Section Headings */
 h2 {
-    color: #ff4b2b;
     font-size: 28px;
+    color: #4a6572;
+}
+
+h3 {
+    font-size: 22px;
+    color: #333;
 }
 
 /* Gambar */
 img {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: auto;
     border-radius: 10px;
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* Efek Hover pada Gambar */
 img:hover {
-    transform: scale(1.1);
-    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* List Styling */
 ul {
     list-style-type: none;
     padding: 0;
+    margin-top: 10px;
 }
 
 ul li {
-    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    background: #4a6572;
     color: white;
     display: inline-block;
-    padding: 12px 18px;
+    padding: 10px 15px;
     margin: 5px;
     border-radius: 8px;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
     font-weight: bold;
-}
-
-/* Efek Hover pada List */
-ul li:hover {
-    background: linear-gradient(45deg, #ffcc00, #ff9900);
-    color: #fff;
-    transform: scale(1.1) rotate(5deg);
 }
 
 /* Footer */
 footer {
     text-align: center;
-    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    background: linear-gradient(90deg, #829ab1, #a2b9bc);
     color: white;
     padding: 15px 0;
     margin-top: 20px;
     font-weight: 400;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Tombol Interaktif */
-.button {
-    display: inline-block;
-    padding: 12px 25px;
-    margin-top: 15px;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-    background: linear-gradient(45deg, #ff9900, #ffcc00);
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* Hover pada Tombol */
-.button:hover {
-    background: linear-gradient(45deg, #ff4b2b, #ff416c);
-    transform: scale(1.1);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
-}
-
-/* Animasi Floating */
-@keyframes floating {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
-}
-
-.button {
-    animation: floating 3s infinite ease-in-out;
+footer:hover {
+    transform: scale(1.05);
 }
