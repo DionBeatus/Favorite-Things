@@ -1,14 +1,11 @@
-/* Import Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-/* Reset */
 body, h1, h2, p, ul {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
 
-/* Body Styling */
 body {
     background: linear-gradient(135deg, #d9d9d9, #b8c6db);
     color: #333;
@@ -18,7 +15,6 @@ body {
     transition: background 0.5s ease-in-out;
 }
 
-/* Header */
 header {
     background: linear-gradient(90deg, #829ab1, #a2b9bc);
     color: white;
@@ -33,7 +29,6 @@ header:hover {
     transform: scale(1.05);
 }
 
-/* Navigasi */
 nav {
     margin-top: 10px;
     padding: 10px;
@@ -75,7 +70,6 @@ nav ul li a:hover {
     background: #3d566e;
 }
 
-/* Content Sections */
 section {
     background: #f1f1f1;
     color: black;
@@ -102,7 +96,6 @@ h3 {
     color: #333;
 }
 
-/* Gambar */
 img {
     width: 100%;
     max-width: 300px;
@@ -118,7 +111,6 @@ img:hover {
     box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* List Styling */
 ul {
     list-style-type: none;
     padding: 0;
@@ -135,7 +127,38 @@ ul li {
     font-weight: bold;
 }
 
-/* Footer */
+audio {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background: #4a6572;
+    padding: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+audio:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.spotify-embed {
+    width: 100%;
+    max-width: 400px; 
+    height: 180px; 
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.spotify-embed:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+}
+
 footer {
     text-align: center;
     background: linear-gradient(90deg, #829ab1, #a2b9bc);
